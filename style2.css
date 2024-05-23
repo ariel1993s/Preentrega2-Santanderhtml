@@ -1,0 +1,185 @@
+*{   padding: 0;margin: 0;}
+ 
+body{  background-color: cornsilk;}
+
+.caja{  text-align: center;}
+
+
+.contenedor{
+    background-color: darkgreen;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 80% 10% 10%;
+    grid-template-rows: 10% 80% 10%;
+
+    grid-template-areas: 'cabecera cabecera logo'
+                         'contenido contenido lateral'
+                         'footer footer footer';
+}
+
+
+.c1{
+    text-align: center;
+        background-color: rgb(3, 3, 3);
+        grid-area:  cabecera;
+        display: grid;
+        grid-template-columns: 10% 80% ;
+        grid-template-rows: 70% 30%;
+        grid-template-areas: "ini up"
+                             "ini fin";
+        color: aliceblue;
+}
+
+.tit{ text-align: center;
+grid-area: up;}
+
+.vuelta{font-size: x-large;
+grid-area: ini;
+padding-top: 30px;
+
+}
+.slogan{
+    grid-area: fin;
+}
+
+.c11{
+        border-left: 2px solid white;
+        background-image: url(https://th.bing.com/th/id/OIP.6dAvMaHA3s7osieHKCfN_QHaHa?w=200&h=200&c=7&r=0&o=5&pid=1.7);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        grid-area: logo;
+}
+
+
+.c3{    
+        background-color: rgb(255, 255, 255);
+        grid-area: contenido;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: 10% auto auto auto;
+        border: 2px solid black;
+
+        grid-template-areas: 'rem rem rem'
+                             'r1 r2 r3'
+                             'r4 r5 r6';
+}
+
+.rr0{grid-area: rem;
+    font-size: xx-large;
+    padding-top: 50px;
+}
+
+
+.rr1{grid-area: r1;
+    padding-top: 300px;
+    background-image: url("https://th.bing.com/th/id/OIP.PchsFo1ecFVlvnLdoSmNiAHaHa?w=199&h=199&c=7&r=0&o=5&pid=1.7");
+    
+ background-position: center;
+    background-repeat: no-repeat;}
+
+
+.rr2{grid-area: r2;
+    background-image: url("https://th.bing.com/th/id/OIP.PchsFo1ecFVlvnLdoSmNiAHaHa?w=199&h=199&c=7&r=0&o=5&pid=1.7");
+    background-position: center;
+    background-repeat: no-repeat;}
+
+.rr3{grid-area: r3;
+    background-image: url("https://th.bing.com/th/id/OIP.PchsFo1ecFVlvnLdoSmNiAHaHa?w=199&h=199&c=7&r=0&o=5&pid=1.7");
+    background-position: center;
+    background-repeat: no-repeat;}
+
+
+.rr4{grid-area: r4;
+    padding-top: 300px;
+    background-image: url("https://th.bing.com/th/id/OIP.PchsFo1ecFVlvnLdoSmNiAHaHa?w=199&h=199&c=7&r=0&o=5&pid=1.7");
+    background-position: center;
+    background-repeat: no-repeat;}
+
+
+.rr5{grid-area: r5;
+    background-image: url("https://th.bing.com/th/id/OIP.PchsFo1ecFVlvnLdoSmNiAHaHa?w=199&h=199&c=7&r=0&o=5&pid=1.7");
+    background-position: center;
+    background-repeat: no-repeat;}
+
+
+.rr6{grid-area: r6;
+    background-image: url("https://th.bing.com/th/id/OIP.PchsFo1ecFVlvnLdoSmNiAHaHa?w=199&h=199&c=7&r=0&o=5&pid=1.7");
+    background-position: center;
+    background-repeat: no-repeat;}
+
+
+
+.c4{
+        background-color: rgb(8, 8, 8);
+        text-align:  center justify;
+        padding-top: 30%;
+        grid-area: lateral;
+        color: aliceblue;
+        display: grid;
+        grid-template-rows: auto auto auto auto;
+}
+
+.c5{
+        background-color: rgb(184, 184, 183);
+        border-top: 2px outset gray;
+        grid-area: footer;
+        padding-left: 30%;
+        padding-right: 30%;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto;
+}
+
+.r1{grid-column: 1/4;}
+
+.lat1{ color: aliceblue;}
+
+@media only screen and (max-width: 550px)
+{
+    .c3{    
+    background-color: rgb(255, 255, 255);
+    grid-area: contenido;
+    display: grid;
+    grid-template-columns: auto  auto;
+    grid-template-rows: 2% auto  auto;
+    border: 2px solid black;
+
+    grid-template-areas: 'rem rem '
+                         "r1 r2"
+                         "r3 r4" 
+                         "r5 r6";
+    }
+    .contenedor{
+    background-color: darkgreen;
+    display: grid;
+    height: 200vh;
+    grid-template-columns: 90% 10%;
+    grid-template-rows: 10% 70% 10% 10%;
+
+    grid-template-areas: 'cabecera logo'
+                         'contenido contenido'
+                         'lateral lateral'
+                         'footer footer';
+    }
+
+
+    .c4{
+    background-color: rgb(8, 8, 8);
+    text-align:  center justify;
+    padding-top: 10%;
+    grid-area: lateral;
+    color: aliceblue;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    }
+    .rr0{
+    padding-top: 5px;
+    }
+
+    .rr4{
+    padding-top: 3px;}
+
+    .rr1{
+        padding-top: 3px; }      
+}
